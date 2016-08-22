@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kawabanga</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hint_login">Informe seu login</string>
+    <string name="hint_senha">Informe sua senha</string>
+    <string name="botao_login">conectar</string>
+
+</resources>
