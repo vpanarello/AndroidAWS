@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_passwd_field">Insira sua senha</string>
+    <string name="hint_user_field">Insira seu usuário</string>
+    <string name="label_login_button">Entrar</string>
+    <string name="label_passwd">Senha</string>
+    <string name="label_pwd">Senha</string>
+    <string name="label_user">Usuário</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">Auto Kaffe Machine</string>
+    <string name="label_user">User</string>
+    <string name="label_pwd">Password</string>
+    <string name="hint_user_field">Insert your username</string>
+    <string name="label_passwd">Password</string>
+    <string name="hint_passwd_field">Insert your password</string>
+    <string name="label_login_button">Login</string>
+    <string name="msg_invalid_user">Invalid User</string>
+    <string name="hello">Hello %1$s</string>
+</resources>
