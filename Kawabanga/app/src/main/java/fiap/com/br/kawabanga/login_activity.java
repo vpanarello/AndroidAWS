@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import models.Usuario;
+
 public class login_activity extends AppCompatActivity {
 
     private TextInputLayout tilLogin;
@@ -50,8 +52,10 @@ public class login_activity extends AppCompatActivity {
 
         if(login.equals("fiap") && password.equals("123")) {
             Intent intent = new Intent(this, PedidoActivity.class);
-            intent.putExtra("usuario", login);
+            intent.putExtra("usuario", new Usuario(login,senha));
+
             startActivity(intent);
+            finish();
         } else {
             Toast.makeText(this, "Usuário ou senha invalidos!",
                 Toast.LENGTH_LONG).show();
