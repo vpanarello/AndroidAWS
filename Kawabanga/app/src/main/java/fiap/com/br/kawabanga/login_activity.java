@@ -52,7 +52,7 @@ public class login_activity extends AppCompatActivity {
 
         if(login.equals("fiap") && password.equals("123")) {
             Intent intent = new Intent(this, PedidoActivity.class);
-            intent.putExtra("usuario", new Usuario(login,senha));
+            intent.putExtra("usuario", new Usuario(login, password));
 
             startActivity(intent);
             finish();

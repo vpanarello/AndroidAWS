@@ -18,7 +18,7 @@ public class PedidoActivity extends AppCompatActivity {
 
     private TextView tvUsuario;
 
-    private TextView tvUsuario;
+   // private TextView tvUsuario;
     private CheckBox cbAtum;
     private CheckBox cbBacon;
     private CheckBox cbMussarela;
@@ -39,15 +39,13 @@ public class PedidoActivity extends AppCompatActivity {
 
 
 
-
-
         cbAtum = (CheckBox) findViewById(R.id.cbAtum);
         cbBacon = (CheckBox) findViewById(R.id.cbBacon);
         cbMussarela = (CheckBox) findViewById(R.id.cbMuzzarela);
         cbCalabresa = (CheckBox) findViewById(R.id.cbCalabreza);
 
         rgTamanhoPizza = (RadioGroup) findViewById(R.id.rgTamanhoPizza);
-        spPagamentos = (Spinner) findViewById(R.id.spOpcoesPagamento)
+        spPagamentos = (Spinner) findViewById(R.id.spOpcoesPagamento);
         cbBordaRecheada = (CheckBox) findViewById(R.id.cbBordaRecheada);
         cbRecheioExtra = (CheckBox) findViewById(R.id.cbRecheioExtra);
         cbRefrigerante = (CheckBox) findViewById(R.id.cbRefrigerante);
@@ -55,8 +53,8 @@ public class PedidoActivity extends AppCompatActivity {
 
         //tvUsuario.setText(getIntent().getStringExtra("usuario"));
 
-        Usuario usuario = getIntent().getExtras().getPa
-
+        Usuario usuario = getIntent().getExtras().getParcelable("usuario");
+        tvUsuario.setText(usuario.getLogin());
     }
     public void calcular(View view) {
         int idSelecionado = rgTamanhoPizza.getCheckedRadioButtonId();
