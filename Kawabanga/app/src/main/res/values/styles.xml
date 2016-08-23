@@ -7,21 +7,27 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="AppTheme.NoActionBar">
+<!--    <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" /> -->
 
     <style name="fiap">
         <item name="android:textColor">@color/colorText</item>
     </style>
 
     <style name="botao" parent="fiap">
-        <item name="android:background">@color/colorPrimeryDark</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
         <item name="android:textSize">@dimen/tamanho_texto_botao_customizado</item>
 
+    </style>
+
+    <style name="checkbox_pizza">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.5</item>
     </style>
 
 </resources>
