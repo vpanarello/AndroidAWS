@@ -1,13 +1,18 @@
 package fiap.com.br.livrariasqlite;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import br.com.fiap.dao.LivrosDao;
+import br.com.fiap.model.Livro;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,5 +53,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private void testeDB() {
+        LivrosDao dao = new LivrosDao(this);
+
+        SharedPreferences sp = getSharedPreferences("LIVRARIA", MODE_PRIVATE);
+
+        if(sp.getBoolean("ALREADY_INSERTED", false)) {
+
+
+
+        } else {
+            dao.add(new Livro("Google Android", "Ricardo Lochetta"));
+            dao.add(new Livro("Crepusculo", "stephanie Meyer"));
+            dao.add(new Livro("50 tons de cinza", "EL James"));
+
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putBoolean("ALREADY_INSERTED", true);
+
+            editor.commit();
+        }
+        List<Livro> livros = dao.getAll();
+
+        for (Livro livro : livros) {
+            Log.i("LIVRO", livro.getTitulo());
+        }
     }
 }
