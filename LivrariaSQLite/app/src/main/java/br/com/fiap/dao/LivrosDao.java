@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import br.com.fiap.model.Livro;
 
@@ -46,12 +47,12 @@ public class LivrosDao {
                 TABELA_LIVROS, // nome da tabela
                 COLUMNS, // colunas
                 "id = ?", // select
-                new String[] {String.valueOf(id)}, // argumentos do select
+                new String[]{String.valueOf(id)}, // argumentos do select
                 null, // group by
                 null, // having
                 null, // order by
                 null // limit
-            );
+        );
 
         if(cursor != null) {
             cursor.moveToFirst();
@@ -60,7 +61,7 @@ public class LivrosDao {
             livro.setAutor(cursor.getString(2));
         }
 
-        return livros;
+        return livro;
     }
 
     public List<Livro> getAll() {
@@ -76,8 +77,8 @@ public class LivrosDao {
             do {
                 Livro livro = new Livro();
                 livro.setId(cursor.getInt(cursor.getColumnIndex(COLUMNS[0])));
-                livro.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMNS[1]));
-                livro.setAutor(cursor.getString(cursor.getColumnIndex(COLUMNS[2]));
+                livro.setTitulo(cursor.getString(cursor.getColumnIndex(COLUMNS[1])));
+                livro.setAutor(cursor.getString(cursor.getColumnIndex(COLUMNS[2])));
                 livros.add(livro);
             } while (cursor.moveToNext());
 
@@ -95,8 +96,8 @@ public class LivrosDao {
         db.update(TABELA_LIVROS,
                 valores,
                 COLUMNS[0] + " = ? ",
-                new String[] {String.valueOf(livro.getId())}
-                );
+                new String[]{String.valueOf(livro.getId())}
+        );
         db.close();
     }
 
