@@ -1,7 +1,9 @@
 package fiap.com.br.demoandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -22,7 +24,14 @@ public class MainActivity extends AppCompatActivity {
         curso = (Spinner) findViewById(R.id.spCurso);
     }
 
+    private void cadastrar(View view) {
 
-    
+        Intent toNextScreen = new Intent(this, FirstScreen.class);
+        startActivity(toNextScreen);
+
+
+
+
+    }
 
 }

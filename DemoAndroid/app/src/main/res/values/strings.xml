@@ -6,4 +6,5 @@
         <item>Curso 03</item>
         <item>Curso 04</item>
     </string-array>
+    <string name="title_activity_first_screen">FirstScreen</string>
 </resources>

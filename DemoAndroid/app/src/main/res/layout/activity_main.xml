@@ -48,7 +48,8 @@
             android:layout_height="wrap_content"
             android:text="Cadastrar"
             android:id="@+id/btCadastrar"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="cadastrar"  />
 
     </LinearLayout>
 </RelativeLayout>
