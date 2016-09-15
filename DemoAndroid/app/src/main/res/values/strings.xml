@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DemoAndroid</string>
+    <string-array name="sp_cursos">
+        <item>Curso 01</item>
+        <item>Curso 02</item>
+        <item>Curso 03</item>
+        <item>Curso 04</item>
+    </string-array>
+</resources>
